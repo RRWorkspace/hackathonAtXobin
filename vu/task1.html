@@ -1,0 +1,49 @@
+<div class="row" >
+    <div class="col-lg-12 text-center">
+        <h1>
+        Questions
+        </h1>
+    </div>
+
+
+    <div class="col-lg-10 col-lg-offset-1 text-center postList">
+
+        <!-- ******************** AngularUI pagination ************************** -->
+        <ul uib-pagination max-size="maxSize" total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()">  </ul>
+
+<!--Post Template-->
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1 post" data-ng-repeat="post in posts | pagination: currentPage * itemsPerPage | limitTo: maxSize">
+                <div class="row">
+                    <div class="col-sm-12 postBody">
+                        {{post._Body}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 postDate">
+                        {{post._ViewCount}} <p class="fa fa-user"></p>
+                    </div>
+                    <div class="col-sm-3 postDate">
+                        <span>
+                        {{post._FavoriteCount}} <p class="fa fa-thumbs-up vote" data-ng-click="vote(1, $index, post._Id)"></p> 
+                        &nbsp;&nbsp;{{post.DislikeCount}} <p class="fa fa-thumbs-down vote" data-ng-click="vote(0, $index, post._Id)"></p> 
+                        </span>
+                    </div>
+                    <div class="col-sm-3 postDate">
+                        {{post._CommentCount}} <p class="fa fa-comment"> </p>
+                    </div>
+                    <div class="col-sm-3 postDate">
+                        {{post._AnswerCount}} <p class="fa fa-puzzle-piece"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+              
+        
+
+        <!--<div class="row">
+            <div class="col-lg-6 col-lg-offset-3" data-ng-repeat
+        </div>-->
+    </div>
+</div>

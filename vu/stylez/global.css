@@ -1,0 +1,35 @@
+.Fence, .SubFence {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.postList {
+    border: solid 1px grey;
+    background-color: lightblue;
+    margin-top: 10px;
+    margin-bottom:20px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.post {
+    color:black;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom:30px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.postBody {
+    color: grey;
+    padding: 10px;
+}
+
+.vote:hover {
+    cursor: pointer;
+}
